@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 20px 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero .tagline {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+.hero .subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.85;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 18px 40px;
+  background: white;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+.main-content {
+  background: #f7fafc;
+}
+
+/* Problem Section */
+.problem-section {
+  background: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.problem-section h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 30px;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.problem-card {
+  background: #fff5f5;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 4px solid #fc8181;
+}
+
+.problem-card h3 {
+  color: #c53030;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.problem-card p {
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+/* Solution Section */
+.solution-section {
+  background: linear-gradient(135deg, #f6f8fb 0%, #e9ecf5 100%);
+  padding: 80px 20px;
+}
+
+.solution-section h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.solution-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.solution-card {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.solution-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.solution-card h3 {
+  color: #667eea;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.solution-card p {
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+/* How It Works */
+.how-section {
+  background: white;
+  padding: 80px 20px;
+}
+
+.how-section h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.steps {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  align-items: flex-start;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.step-content h3 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.step-content p {
+  color: #4a5568;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.step-visual {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border-left: 3px solid #667eea;
+}
+
+.step-visual ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.step-visual li {
+  padding: 8px 0;
+  color: #4a5568;
+}
+
+.step-visual li::before {
+  content: "✓ ";
+  color: #48bb78;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.philosophy-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.philosophy-item {
+  padding: 30px;
+}
+
+.philosophy-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+.philosophy-item p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.final-cta {
+  background: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.final-cta h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.final-cta p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+footer {
+  background: #2d3748;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .tagline {
+    font-size: 1.2rem;
+  }
+
+  .step {
+    flex-direction: column;
+  }
+
+  .problem-grid,
+  .solution-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.emoji {
+  display: inline-block;
+  margin: 0 5px;
+}
